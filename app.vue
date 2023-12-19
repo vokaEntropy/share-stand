@@ -141,7 +141,7 @@ const doubleShareFiles = async () => {
 };
 
 const shareContentToBestSocialNetworkVK = () => {
-  const shareUrl = `https://vk.com/share.php?title='Поймай дракона, получи предсказание&image=https://pixabay.com/get/g9fc4d3e4814bdb2fa594241ba28676b33e0af7ca604b54987076921b7844524e0ef37be07bb28d0957b0718892fb9cc57a132fd251141dc389d53b1bdd6cf847_640.jpg'`;
+  const shareUrl = `https://vk.com/share.php?title=Поймай дракона, получи предсказание&image=https://thefastest.megafon.ru/images/og/dragon.jpg'`;
   window.open(shareUrl, "_blank");
   tryCatch(analytics.share);
 
