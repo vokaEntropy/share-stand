@@ -6,6 +6,7 @@
     <button @click="imageShareByAll">Share with image by all</button>
     <button @click="mobileImageShare">Share text + image link</button>
     <button @click="doubleShareFiles">Share double</button>
+    <button @click="shareContentToBestSocialNetworkVK">Share vk</button>
 
     <p>Поделиться от яндекса</p>
     <div class="ya-share2" data-description="Я поделился и обрадовался этому" data-title="ПОДЕЛИТЬСЯ" data-curtain data-shape="round" data-limit="0" data-more-button-type="short" data-services="vkontakte,odnoklassniki"></div>
@@ -139,6 +140,15 @@ const doubleShareFiles = async () => {
   }
 };
 
+const shareContentToBestSocialNetworkVK = () => {
+  const shareUrl = `https://vk.com/share.php?title='Поймай дракона, получи предсказание&image=https://pixabay.com/get/g9fc4d3e4814bdb2fa594241ba28676b33e0af7ca604b54987076921b7844524e0ef37be07bb28d0957b0718892fb9cc57a132fd251141dc389d53b1bdd6cf847_640.jpg'`;
+  window.open(shareUrl, "_blank");
+  tryCatch(analytics.share);
+
+  if (props.share) {
+    props.share();
+  }
+};
 </script>
 
 <style scoped>
