@@ -6,10 +6,28 @@
     <button @click="imageShareByAll">Share with image by all</button>
     <button @click="mobileImageShare">Share text + image link</button>
     <button @click="doubleShareFiles">Share double</button>
+
+    <p>Поделиться от яндекса</p>
+    <div class="ya-share2" data-description="Я поделился и обрадовался этому" data-title="ПОДЕЛИТЬСЯ" data-curtain data-shape="round" data-limit="0" data-more-button-type="short" data-services="vkontakte,odnoklassniki"></div>
   </div>
 </template>
 
 <script setup>
+useHead({
+  title: "История о том, как нам надо поделиться",
+  script: [
+    {
+      src: "https://yastatic.net/share2/share.js",
+      async: true,
+      onload: () => console.log("⏳ The script for critical errors is loading"),
+      onerror: () =>
+        console.error(
+          "💥 An error occurred while loading the script for critical errors",
+        ),
+    },
+  ],
+});
+
 const mobileShare = async () => {
   if (process.client) {
     const image = 'https://thefastest.megafon.ru/images/og/dragon.jpg'
