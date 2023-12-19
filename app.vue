@@ -9,7 +9,7 @@
     <button @click="shareContentToBestSocialNetworkVK">Share vk</button>
 
     <p>Поделиться от яндекса</p>
-    <div class="ya-share2" data-description="Я поделился и обрадовался этому" data-title="ПОДЕЛИТЬСЯ" data-curtain data-shape="round" data-limit="0" data-more-button-type="short" data-services="vkontakte,odnoklassniki"></div>
+    <div class="ya-share2" data-u data-image="https://thefastest.megafon.ru/images/og/dragon.jpg" data-description="Я поделился и обрадовался этому" data-title="ПОДЕЛИТЬСЯ" data-curtain data-shape="round" data-limit="0" data-more-button-type="short" data-services="vkontakte,odnoklassniki"></div>
   </div>
 </template>
 
